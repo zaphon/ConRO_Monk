@@ -125,7 +125,7 @@ function ConRO.Monk.Under10(_, timeShift, currentSpell, gcd, tChosen, pvpChosen)
 --Conditions
 	local _is_moving 																															= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee																			= ConRO:Targets("Melee");
-	local _target_in_10yrds 																											= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																											= ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -161,7 +161,7 @@ function ConRO.Monk.Under10Def(_, timeShift, currentSpell, gcd, tChosen, pvpChos
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -235,7 +235,7 @@ function ConRO.Monk.Brewmaster(_, timeShift, currentSpell, gcd, tChosen, pvpChos
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Indicators
 	ConRO:AbilityInterrupt(_SpearHandStrike, _SpearHandStrike_RDY and ConRO:Interrupt());
@@ -402,7 +402,7 @@ function ConRO.Monk.BrewmasterDef(_, timeShift, currentSpell, gcd, tChosen, pvpC
 --Conditions
 	local _is_moving 																															= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee																			= ConRO:Targets("Melee");
-	local _target_in_10yrds 																											= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																											= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations
 		if _CelestialBrew_RDY and _PurifiedChi_BUFF then
@@ -474,7 +474,7 @@ function ConRO.Monk.Mistweaver(_, timeShift, currentSpell, gcd, tChosen, pvpChos
 --Conditions
 	local _is_moving 																															= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee																			= ConRO:Targets("Melee");
-	local _target_in_10yrds 																											= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																											= ConRO:CheckInteractDistance("target", 3);
 
 	local _Statue_texture = 620831;
 	local _JadeSerpentStatue_ACTIVE = false;
@@ -548,7 +548,7 @@ function ConRO.Monk.MistweaverDef(_, timeShift, currentSpell, gcd, tChosen, pvpC
 --Conditions
 	local _is_moving 																															= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee																			= ConRO:Targets("Melee");
-	local _target_in_10yrds 																											= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																											= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations
 		if _HealingElixir_RDY and _Player_Percent_Health <= 80 then
@@ -637,7 +637,7 @@ function ConRO.Monk.Windwalker(_, timeShift, currentSpell, gcd, tChosen, pvpChos
 --Conditions
 	local _is_moving 																															= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee																			= ConRO:Targets("Melee");
-	local _target_in_10yrds 																											= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																											= ConRO:CheckInteractDistance("target", 3);
 
 	if _Serenity_BUFF then
 		_Chi = 99;
@@ -840,7 +840,7 @@ function ConRO.Monk.WindwalkerDef(_, timeShift, currentSpell, gcd, tChosen, pvpC
 --Conditions
 	local _is_moving 																															= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee																			= ConRO:Targets("Melee");
-	local _target_in_10yrds 																											= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																											= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations
 		if _ExpelHarm_RDY and _Player_Percent_Health <= 50 then
